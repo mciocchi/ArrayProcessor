@@ -4,12 +4,11 @@ function ArrayProcessor () {
         var f = () => {
             return arg;
         };
-        return f;
+        return f();
     };
 
     this.process = (arry) => {
-        var ar = arry.map(_self.transform);
-        return ar.map((f) => {return f()});
+        return arry.map(_self.transform);
     };
 };
 
@@ -18,3 +17,4 @@ module.exports = {
         return new ArrayProcessor();
     }
 };
+f
